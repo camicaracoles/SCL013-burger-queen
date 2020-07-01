@@ -1,5 +1,5 @@
 import React from 'react';
-import EntradaMesero from './componentes/EntradaMesero';
+
 
 class PortalMesero extends React.Component {
 
@@ -11,8 +11,9 @@ class PortalMesero extends React.Component {
                    <p id='fecha'></p>
                    <p id='hora'></p>
                </div>
+               
                <div className='fondo'>
-                  <EntradaMesero />
+            
                </div>
             </React.Fragment >
 
