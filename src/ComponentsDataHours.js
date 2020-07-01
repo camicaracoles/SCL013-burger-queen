@@ -14,8 +14,8 @@ class ComponentsDataHours extends React.Component{
     min = (min < 10 ? "0" : "") + min;
     return(
       <div>
-       { year + '-' + month + '-' + day }
-       { hour + ':' + min }
+       { day + '-' + month + '-' + year + hour + ':' + min }
+
       </div>
     )
   }
