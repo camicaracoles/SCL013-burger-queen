@@ -1,0 +1,12 @@
+@media (min-width: 768px) {
+    
+    .franja {
+        width: 100%;
+        height: 60px;
+        background: #F7D097;
+        border: 1px solid #000000;
+        box-sizing: border-box;
+    }
+
+    
+}

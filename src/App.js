@@ -1,5 +1,7 @@
 import React from 'react';
 import './img/App.css';
+import PortalMesero from './PortalMesero';
+
 
 
 function App() {
@@ -17,6 +19,9 @@ function App() {
           <button id='iniciar'>Iniciar</button>
         </div>
       </div>
+      <section>
+        <PortalMesero />
+      </section>
 
     </div>
   );
