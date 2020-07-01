@@ -1,6 +1,8 @@
 import React from 'react';
 import './img/App.css';
 import ComponentsDataHours from './ComponentsDataHours.js';
+import { AppRouter } from './router/AppRouter';
+
 
 function App() {
 
@@ -10,6 +12,7 @@ function App() {
       <div className='fondo'>
         <div id='contenedorLogin'>
           <div id='dia'>
+<AppRouter/>
             <ComponentsDataHours />
 
           </div>
