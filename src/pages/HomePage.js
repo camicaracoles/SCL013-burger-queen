@@ -1,24 +1,27 @@
 import React from 'react';
-import '../img/App.css'
+import '../img/App.css';
+import '../img/Inicio.css';
 import ComponentsDataHours from '../ComponentsDataHours';
+import {Link} from 'react-router-dom';
 
-export const HomePage = () =>{
 
-  return(
+export const HomePage = () => {
+
+  return (
     <div className="App">
 
       <div className='fondo'>
         <div id='contenedorLogin'>
           <div id='dia'>
 
-      <ComponentsDataHours/>
+            <ComponentsDataHours />
 
           </div>
-          <button className='btn btn-outline-warning' >Administrador</button>
+          <button className='btnHome' >Administrador</button>
 
-          <button className='btn btn-outline-warning' >Cocina</button>
+          <button className='btnHome' >Cocina</button>
 
-          <button className='btn btn-outline-warning' >Mesonero</button>
+          <Link to='/portalmesero'><button className='btnHome'>Mesonero</button></Link>
 
         </div>
       </div>
