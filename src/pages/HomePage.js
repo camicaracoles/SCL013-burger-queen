@@ -1,6 +1,5 @@
 import React from 'react';
-
-
+import '../img/App.css'
 import ComponentsDataHours from '../ComponentsDataHours';
 
 export const HomePage = () =>{
@@ -15,9 +14,12 @@ export const HomePage = () =>{
       <ComponentsDataHours/>
 
           </div>
-          <input id='usuarioLogin' type='text' placeholder='Usuario'></input>
-          <input id='contraseñaLogin' type='text' placeholder='Contraseña'></input>
-          <button id='iniciar'>Iniciar</button>
+          <button className='btn btn-outline-warning' >Administrador</button>
+
+          <button className='btn btn-outline-warning' >Cocina</button>
+
+          <button className='btn btn-outline-warning' >Mesonero</button>
+
         </div>
       </div>
 

@@ -1,3 +1,4 @@
+
   .fondo {
     display: flex;
     justify-content: center;
@@ -5,9 +6,9 @@
     background-image: url(../img/fondo.png);
     width:100vw;
     height:100vh;
-    
+
   }
-  
+
   #contenedorLogin {
     display: flex;
     flex-direction: column;
@@ -19,7 +20,7 @@
     border: 1px solid #000000;
     box-sizing: border-box;
   }
-  
+
   #dia {
     display: flex;
     justify-content: center;
@@ -33,11 +34,11 @@
     position: relative;
     bottom: 80px;
   }
-  
+
   .dia{
     margin: 0px 20px 0px 0px;
   }
-  
+
   #usuarioLogin {
     width: 200px;
     height: 40px;
@@ -49,7 +50,7 @@
     position: relative;
     bottom: 40px;
   }
-  
+
   #contraseñaLogin {
     width: 200px;
     height: 40px;
@@ -61,7 +62,7 @@
     position: relative;
     bottom: 20px;
   }
-  
+
   #iniciar {
     width: 100px;
     height: 40px;
