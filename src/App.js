@@ -1,39 +1,36 @@
 import React from 'react';
-import './img/App.css';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+ NavLink
+} from "react-router-dom";
+import { HomePage } from './pages/HomePage';
+import { RegisterPage} from './pages/RegisterPage';
+import { UsPage } from './pages/UsPage';
+import { ContactPage } from './pages/ContactPage';
 
-
-
-
-function App() {
-
-  let today = new Date();
-  let year = today.getFullYear();
-  let month = today.getMonth() + 1;
-  month = (month < 10 ? "0" : "") + month;
-  let day  = today.getDate();
-  day = (day < 10 ? "0" : "") + day;
-  let hour = today.getHours();
-   hour = (hour < 10 ? "0" : "") + hour;
-  let  min  = today.getMinutes();
-    min = (min < 10 ? "0" : "") + min;
- // let sec  = today.getSeconds();
-    //sec = (sec < 10 ? "0" : "") + sec;
-
+export const AppRouter = () => {
   return (
-    <div className="App">
+    <Router>
+      <div className='container mt-2'>
+        <div className='btn-group'>
+              <Link to="/" className='btn btn-dark'>Inicio</Link>
+              <Link to="/register" className='btn btn-dark'>Registrate</Link>
+              <Link to="/us" className='btn btn-dark'>Nosotros</Link>
+              <NavLink to="/contact" className='btn btn-dark' activeClassName='active'>Contacto</NavLink>
 
-      <div className='fondo'>
-        <div id='contenedorLogin'>
-          <div id='dia'>
-            <p className='dia'> { year + '-' + month + '-' + day }</p>
-            <p className='hora'>{ hour + ':' + min }</p>
-          </div>
-          <input id='usuarioLogin' type='text' placeholder='Usuario'></input>
-          <input id='contraseñaLogin' type='text' placeholder='Contraseña'></input>
-          <button id='iniciar'>Iniciar</button>
         </div>
+
+        <Switch>
+
+          <Route path="/register" component = { RegisterPage }/>
+          <Route path="/us" component = { UsPage }/>
+          <Route path="/contact" component = { ContactPage }/>
+          <Route path="/" component = { HomePage }/>
+        </Switch>
       </div>
-    </div>
+    </Router>
   );
 }
-export default App;
