@@ -21,7 +21,7 @@
     box-sizing: border-box;
   }
 
-  #dia {
+  .dia {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -32,12 +32,10 @@
     box-sizing: border-box;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     position: relative;
-    bottom: 60px;
+    bottom: 40px;
+    
   }
 
-  .dia{
-    margin: 0px 20px 0px 0px;
-  }
 
   #usuarioLogin {
     width: 200px;
@@ -75,3 +73,16 @@
     top: 30px;
     font-size: 16px;
   }
+
+  /* Diseño de día y hora */
+
+  .diaHora {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #diaActual{
+    margin: 0px 15px 0px 0px;
+  }
+

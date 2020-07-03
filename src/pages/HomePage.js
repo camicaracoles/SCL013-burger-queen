@@ -12,16 +12,16 @@ export const HomePage = () => {
 
       <div className='fondo'>
         <div id='contenedorLogin'>
-          <div id='dia'>
+          <div className='dia'>
 
             <ComponentsDataHours />
 
           </div>
-          <button className='btnHome' >Administrador</button>
+          <Link to='/portaladministrador'><button className='btnEntrada' >Administrador</button></Link>
 
-          <button className='btnHome' >Cocina</button>
+          <Link to='/portalcocina'><button className='btnEntrada' >Cocina</button></Link>
 
-          <Link to='/portalmesero'><button className='btnHome'>Mesonero</button></Link>
+          <Link to='/portalmesero'><button className='btnEntrada'>Mesonero</button></Link>
 
         </div>
       </div>

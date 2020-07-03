@@ -1,12 +1,93 @@
 @media (min-width: 768px) {
     
+    /*Portal Mesero*/
+
     .franja {
         display: flex;
+        align-items: center;
         width: 100%;
         height: 60px;
         background: #F7D097;
         border: 1px solid #000000;
         box-sizing: border-box;
+    }
+
+    #nombreMesero {
+        margin: 0px 0px 0px 30px;
+    }
+
+    #diaPortalMesero {
+        margin: 0px 0px 0px 400px;
+    }
+
+    /* Entrada Mesero*/
+
+    .contenedorEntradaMesero {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #titutloEntradaMesero {
+        font-size: 30px;
+    }
+
+    #tipoMenu {
+        display: flex;
+        margin: 0px 0px 0px 20px;
+    }
+
+    .btnsMenu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 200px;
+        height: 40px;
+        background: #F9B550;
+        border: 1px solid #000000;
+        box-sizing: border-box;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        margin: 10px 20px 50px 0px;
+        font-size: 20px;
+    }
+
+    .pedidosParaServir {
+        display: flex;
+        margin: 0px 0px 0px 60px;
+    }
+
+    #alerta{
+        width: 40px;
+        height: 40px;
+        background: #FF3939;
+        border: 1px solid #000000;
+        box-sizing: border-box;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 40px;
+        margin: 0px 0px 0px 20px;
+
+    }
+    .opcionesMesero{
+        width: 400px;
+        height: 35px;
+        background: #F7D097;
+        border: 1px solid #000000;
+        box-sizing: border-box;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        margin: 10px 0px 10px 0px;
+        font-size: 20px;
+    }
+
+    #cerrardia {
+        width: 200px;
+        height: 35px;
+        background: #F7D097;
+        border: 1px solid #000000;
+        box-sizing: border-box;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        margin: 60px 0px 10px 0px;
+        font-size: 20px;
     }
 }
 

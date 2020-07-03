@@ -13,9 +13,9 @@ class ComponentsDataHours extends React.Component{
     let  min  = today.getMinutes();
     min = (min < 10 ? "0" : "") + min;
     return(
-      <div>
-       { day + '-' + month + '-' + year + hour + ':' + min }
-
+      <div className='diaHora'>
+       <p id='diaActual'>{ day + '-' + month + '-' + year}</p> 
+       <p id='horaActual'>{hour + ':' + min} </p>
       </div>
     )
   }
