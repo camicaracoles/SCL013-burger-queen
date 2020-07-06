@@ -1,0 +1,108 @@
+/* Diseño Menú Desyuno*/
+@media (min-width: 768px) {
+    
+    /* Diseño en commún*/
+    
+    .contenedorMenu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .tituloMenu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 300px;
+        height: 50px;
+        background: #F9B550;
+        border: 1px solid #000000;
+        box-sizing: border-box;
+        font-size: 20px;
+    }
+
+    .btnsMenuPedido{
+        display: flex;
+        justify-content: center;
+    }
+
+    .contenedorBtnsMenu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0px 20px 40px 20px;
+    }
+
+    .categoria {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+        color: #FF1111;
+        margin: 10px;
+    }
+
+    /* Menú Desayuno*/
+    
+    .liquidoCaliente {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 150px;
+        height: 50px;
+        background: #FFFFFF;
+        border: 1px solid #000000;
+        box-sizing: border-box;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        margin: 10px 0px 10px 0px;
+        font-size: 15px;
+    }
+    
+    .sandwich {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 170px;
+        height: 67px;
+        background: #FFFFFF;
+        border: 1px solid #000000;
+        box-sizing: border-box;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        margin: 10px 0px 10px 0px;
+        font-size: 15px;  
+    }
+
+    /* Menú Del Día*/
+
+    .liquidosFrios {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 170px;
+        height: 50px;
+        background: #FFFFFF;
+        border: 1px solid #000000;
+        box-sizing: border-box;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        margin: 10px 0px 10px 0px;
+        font-size: 15px;
+    }    
+
+    .hamburguesa {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 170px;
+        height: 67px;
+        background: #FFFFFF;
+        border: 1px solid #000000;
+        box-sizing: border-box;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        margin: 17px 0px 17px 0px;
+        font-size: 15px;  
+    
+    }
+}

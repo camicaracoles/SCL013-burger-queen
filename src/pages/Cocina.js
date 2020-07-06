@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const UsPage = () =>{
+export const Cocina = () =>{
   return(
     <div>
     Pagina Nosotros      
