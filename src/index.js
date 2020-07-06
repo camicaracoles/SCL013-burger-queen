@@ -1,14 +1,17 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import { AppRouter } from './App';
+import { AppRouter } from './AppRouter';
+import { FirebaseAppProvider } from 'reactfire'
+import {firebaseConfig} from './firebase-Config'
 
 
-
-ReactDOM.render(
-  <React.StrictMode>
-    <AppRouter/>
-  </React.StrictMode>,
+ReactDOM.render((
+  <FirebaseAppProvider firebaseConfig={firebaseConfig}>
+    <Suspense fallback={'Conectando la app'}>
+  <AppRouter />
+  </Suspense>
+  </FirebaseAppProvider>
+),
   document.getElementById('root')
 );
 
