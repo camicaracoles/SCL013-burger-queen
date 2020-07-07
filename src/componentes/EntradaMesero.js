@@ -9,18 +9,17 @@ class EntradaMesero extends React.Component {
             <div className='contenedorEntradaMesero'>
                 <p id='titutloEntradaMesero'>Ingrasar pedido</p>
                 <div id='tipoMenu'>
-                <button className='btnsMenu'>Menú Del Desayuno</button>
-                    <button className='btnsMenu'>Menú Del Día</button>
+                <button onClick={this.navegarMenuDesayuno} className='btnsMenu'>Menú Del Desayuno</button>
+                    <button onClick={this.navegarMenuDia} className='btnsMenu'>Menú Del Día</button>
                 </div>
                 <div className='pedidosParaServir'>
-                <button className='opcionesMesero'>Pedidos listos para servir</button>
+                <button onClick={this.navegarPedidosListos} className='opcionesMesero'>Pedidos listos para servir</button>
                     <div id='alerta'></div>
                 </div>
-                <button className='opcionesMesero'>Lista pedidos servidos</button>
-                <button className='opcionesMesero'>Listta pedidos pagados</button>
+                <button onClick={this.navegarPedidosServidos} className='opcionesMesero'>Lista pedidos servidos</button>
+                <button onClick={this.navegarPedidosPagados} className='opcionesMesero'>Lista pedidos pagados</button>
                 <button className='cerrardia'>Cerrar día</button>
             </div>
-
 
         );
     }
