@@ -1,7 +1,8 @@
 import React from 'react';
 import '../img/PortalMesero.css'
-import ComponentsDataHours from '../ComponentsDataHours';
+import ComponentsDataHours from '../componentes/ComponentsDataHours';
 import EntradaMesero from '../componentes/EntradaMesero';
+
 
 class PortalMesero extends React.Component {
 
@@ -32,6 +33,13 @@ class PortalMesero extends React.Component {
   }
 
   render() {
+    const estado = this.state.estado;
+    let fondoPortalMEsero;
+      if (estado === 1) {
+        fondoPortalMEsero = <MenuDesayuno />;
+        } else {
+        button = <LoginButton onClick={this.handleLoginClick} />;
+        }
     return (
       <div>
         <div className='franja'>

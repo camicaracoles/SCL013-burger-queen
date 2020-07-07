@@ -2,6 +2,8 @@ import React from 'react';
 import '../img/Menu.css'
 import '../img/CalcularCuenta.css'
 import CalcularCuenta from '../componentes/CalcularCuenta';
+import BotonMenu from './BotonMenu.componente';
+import productos from './Data';
 
 
 class MenuDelDia extends React.Component {
@@ -13,7 +15,7 @@ class MenuDelDia extends React.Component {
                 <div className='btnsMenuPedido'>
                     <div className='contenedorBtnsMenu'>
                         <p className='categoria'>Res</p>
-                        <button className='hamburguesa'>Hamburguesa de <br />res La Clasica<br />$5.000</button>
+                        <BotonMenu className='hamburguesa'>Hamburguesa de <br />res La Clasica<br />$5.000</BotonMenu>
                         <button className='hamburguesa'>Hamburguesa de <br />res Ranchera<br />$6.000</button>
                         <button className='hamburguesa'>Hamburguesa de <br />res Tres Quesos<br />$6.500</button>
                         <button className='hamburguesa'>Hamburguesa de <br />res Mexicana<br />$6.500</button>

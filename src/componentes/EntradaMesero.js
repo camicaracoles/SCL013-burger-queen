@@ -4,7 +4,7 @@ import '../img/PortalMesero.css'
 
 class EntradaMesero extends React.Component {
         
-    render() {
+    render() {  
         return (
             <div className='contenedorEntradaMesero'>
                 <p id='titutloEntradaMesero'>Ingrasar pedido</p>
