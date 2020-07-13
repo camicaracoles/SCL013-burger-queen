@@ -1,8 +1,8 @@
 import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom';
 import { AppRouter } from './AppRouter';
-import { FirebaseAppProvider } from 'reactfire'
-import {firebaseConfig} from './firebase-Config'
+import { FirebaseAppProvider } from 'reactfire';
+import {firebaseConfig} from './componentes/firebaseConfig';
 
 
 ReactDOM.render((

@@ -1,6 +1,6 @@
 import React from 'react';
 import '../img/App.css'
-import ComponentsDataHours from '../ComponentsDataHours';
+import ComponentsDataHours from '../componentes/ComponentsDataHours';
 
 export const RegisterPage = () => {
   return (
