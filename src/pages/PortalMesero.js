@@ -2,44 +2,64 @@ import React from 'react';
 import '../img/PortalMesero.css'
 import ComponentsDataHours from '../componentes/ComponentsDataHours';
 import EntradaMesero from '../componentes/EntradaMesero';
+import MenuDesayuno from '../componentes/MenuDesayuno';
+import MenuDelDia from '../componentes/MenuDelDia';
+import flecha from '../img/flecha.png';
+import PedidosListos from '../componentes/PedidosListos';
+import PedidosServidos from '../componentes/PedidosServidos';
 
 
-class PortalMesero extends React.Component {
+
+export class PortalMesero extends React.Component {
 
   constructor(props) {
     super(props);
-    this.navegarMenuDesayuno = this.navegarMenuDesayuno.bind(this);
-    this.navegarMenuDia = this.navegarMenuDia.bind(this);
-    this.navegarPedidosListos = this.navegarPedidosListos.bind(this);
-    this.navegarPedidosServidos = this.navegarPedidosServidos.bind(this);
-    this.navegarPedidosPagados = this.navegarPedidosPagados.bind(this);
     this.state = { estado: 0 };
   }
 
-  navegarMenuDesayuno() {
-    this.setState({estado: 1});
+  navegarHacia = (donde) => {
+    switch (donde) {
+      case 'menuDesayuno':
+        this.setState({ estado: 1 })
+        break;
+      case 'menuDia':
+        this.setState({ estado: 2 })
+        break;
+      case 'pedidosListos':
+        this.setState({ estado: 3 })
+        break;
+      case 'pedidosServidos':
+        this.setState({ estado: 4 })
+        break;
+      case 'pedidosPagados':
+        this.setState({ estado: 5 })
+        break;
+      default:
+        this.setState({ estado: 0 })
+        break;
+    }
   }
-  navegarMenuDia() {
-    this.setState({estado: 2});
-  }
-  navegarPedidosListos() {
-    this.setState({estado: 3});
-  }
-  navegarPedidosServidos() {
-    this.setState({estado: 4});
-  }
-  navegarPedidosPagados() {
-    this.setState({estado: 5});
+
+  mostrarComponente = estadoActual => {
+    switch (estadoActual) {
+      case 1:
+        return <MenuDesayuno handler={this.navegarHacia} />;
+      case 2:
+        return <MenuDelDia handler={this.navegarHacia} />;
+      case 3:
+        return <PedidosListos handler={this.navegarHacia} />;
+      case 4:
+        return <PedidosServidos handler={this.navegarHacia} />;
+      default:
+        return <EntradaMesero handler={this.navegarHacia} />;
+    }
+  };
+
+  volverPortalMesero = () => {
+    this.setState({ estado: 0 })
   }
 
   render() {
-    const estado = this.state.estado;
-    let fondoPortalMEsero;
-      if (estado === 1) {
-        fondoPortalMEsero = <MenuDesayuno />;
-        } else {
-        button = <LoginButton onClick={this.handleLoginClick} />;
-        }
     return (
       <div>
         <div className='franja'>
@@ -49,16 +69,17 @@ class PortalMesero extends React.Component {
             <ComponentsDataHours />
 
           </div>
-
+        </div>
+        <div className='volverPortalMesero'>
+          <button onClick={this.volverPortalMesero} className='contenedorFlecha'>
+            <img class='flechaVolver' src={flecha} alt='flecha' />
+          </button>
         </div>
         <div className='fondoPortalMesero'>
-
-          <EntradaMesero />
-
+          {this.mostrarComponente(this.state.estado)}
         </div>
       </div>
     )
   }
 }
 
-export default PortalMesero;

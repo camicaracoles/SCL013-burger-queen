@@ -1,21 +1,16 @@
 import React from 'react';
 import '../img/CalcularCuenta.css'
-import borrar from '../img/borrar.png';
 
-export const CalcularCuenta = () => {
+const CalcularCuenta = () => {
+
     return (
         <div className='calcularCompra'>
             <div className='primeraLinea'>
                 <input className='nombreCliente' type='text' placeholder='Nombre Cliente'></input>
                 <input className='mesa' type='text' placeholder='Mesa'></input>
             </div>
-
+            <input className='nombreCliente' type='text' placeholder='Nota del pedido'></input>
             <div className='detalleCompra'>
-                <p className='textoDetalleCompra'> Limonada dulce</p>
-                <p className='valorProducto'>$3.000</p>
-                <button className='borrar'>
-                    <img class='imgBorrar' src={borrar} alt='borrar' />
-                </button>
 
             </div>
 
