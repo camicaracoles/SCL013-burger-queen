@@ -1,0 +1,189 @@
+{
+  "cafe": [{
+      "id": 1,
+      "name": "Café americano",
+      "valor": 3000
+    },
+    {
+      "id": 2,
+      "name": "Café con leche",
+      "valor": 4000
+    },
+    {
+      "id": 3,
+      "name": "Capuchino",
+      "valor": 4000
+    },
+    {
+      "id": 4,
+      "name": "Café mocca",
+      "valor": 5000
+    },
+    {
+      "id": 5,
+      "name": "Té negro",
+      "valor": 3000
+    }
+  ],
+  "desayunos": [
+
+    {
+      "id": 11,
+      "name": "Sandwich de jamón y queso",
+      "valor": 4000
+    },
+    {
+      "id": 12,
+      "name": "Sandwich de huevo cibullete",
+      "valor": 4000
+    },
+    {
+      "id": 13,
+      "name": "Sandwich de pollo pimentón",
+      "valor": 5000
+    },
+    {
+      "id": 14,
+      "name": "Sandwich de verduras asadas",
+      "valor": 5000
+    },
+    {
+      "id": 15,
+      "name": "Sandwich de jamón y queso",
+      "valor": 4000
+    },
+    {
+      "id": 16,
+      "name": "Sandwich de huevo cibullete",
+      "valor": 4000
+    },
+    {
+      "id": 17,
+      "name": "Sandwich de pollo pimentón",
+      "valor": 5000
+    },
+    {
+      "id": 18,
+      "name": "Sandwich de verduras asadas",
+      "valor": 5000
+    }
+  ],
+  "bebidas": [{
+      "id": 19,
+      "name": "Jugo natural piña",
+      "valor": 3500
+    },
+    {
+      "id": 20,
+      "name": "Jugo natural frambuesa",
+      "valor": 3500
+    },
+    {
+      "id": 21,
+      "name": "Jugo natural frutilla",
+      "valor": 3500
+    },
+    {
+      "id": 22,
+      "name": "Jugo natural naranja",
+      "valor": 3500
+    },
+    {
+      "id": 23,
+      "name": "Limonada dulce",
+      "valor": 3500
+    },
+    {
+      "id": 24,
+      "name": "Coca-cola",
+      "valor": 2000
+    }, {
+      "id": 25,
+      "name": "Fanta",
+      "valor": 2000
+    },
+    {
+      "id": 26,
+      "name": "Sprite",
+      "valor": 2000
+    }
+  ],
+
+  "almuerzos": [{
+      "id": 27,
+      "name": "Hamburguesa de res la clásica",
+      "valor": 5000
+    },
+    {
+      "id": 28,
+      "name": "Hamburguesa de res ranchera",
+      "valor": 6000
+    },
+    {
+      "id": 29,
+      "name": "Hamburguesa de res tres quesos",
+      "valor": 6500
+    },
+    {
+      "id": 30,
+      "name": "Hamburguesa de res mexicana",
+      "valor": 6500
+    },
+    {
+      "id": 31,
+      "name": "Hamburguesa de pollo la clasica",
+      "valor": 5000
+    },
+    {
+      "id": 32,
+      "name": "Hamburguesa de pollo la campestre",
+      "valor": 6000
+    },
+    {
+      "id": 32,
+      "name": "Hamburguesa de pollo la chapetona",
+      "valor": 6500
+    },
+    {
+      "id": 33,
+      "name": "Hamburguesa de pollo a caballo",
+      "valor": 6500
+    },
+    {
+      "id": 34,
+      "name": "Hamburguesa vegetariana coccon",
+      "valor": 5000
+    },
+    {
+      "id": 35,
+      "name": "Hamburguesa vegetariana burrok",
+      "valor": 6000
+    },
+    {
+      "id": 36,
+      "name": "Hamburguesa vegeratiana mundial",
+      "valor": 6500
+    },
+    {
+      "id": 37,
+      "name": "Hamburguesa vegetariana colores",
+      "valor": 6500
+    }
+  ],
+  "adicionales": [{
+      "id": 38,
+      "name": "Palta",
+      "valor": 1500
+    },
+    {
+      "id": 39,
+      "name": "Huevo",
+      "valor": 1000
+    },
+    {
+      "id": 40,
+      "name": "Queso",
+      "valor": 2000
+    }
+  ]
+}
