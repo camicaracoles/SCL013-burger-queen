@@ -14,21 +14,13 @@ class MenuDelDia extends React.Component {
                 <div className='btnsMenuPedido'>
                     <div className='contenedorBtnsMenu'>
                         <p className='categoria'>Res</p>
-                        {
-                            data.filter(hamburguesas => hamburguesas.id === 4).map(hamburguesas => {
-                                return <BotonMenu name={item.name} valor={}/>;
-                            })
-                        }
+
                         <p className='categoria'>Pollo</p>
                         <BotonMenu className='hamburguesa'>Hamburguesa de <br />pollo La Clasica <br />$5.000</BotonMenu>
                         <BotonMenu className='hamburguesa'>Hamburguesa de <br />pollo La Campestre <br />$6.000</BotonMenu>
                     </div>
 
-                    {
-                        data.filter( hamburguesas=> hamburguesas.id => 4).map(item => {
-                            return <ComponenteBoton name={hamburguesas.name} valor={hamburguesas} />;
-                        })
-                    }
+
                     <div className='contenedorBtnsMenu'>
                         <p className='categoria'>Pollo</p>
                         <BotonMenu className='hamburguesa'>Hamburguesa de <br />pollo La Chapetona <br />$6.500</BotonMenu>

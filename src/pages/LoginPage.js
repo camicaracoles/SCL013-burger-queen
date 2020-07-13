@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom';
 import '../img/App.css';
 import 'firebase/auth';
 import {Link} from 'react-router-dom';
-import { db, auth } from '../firebase-Config';
+import { db, auth } from '../componentes/firebaseConfig';
 import ComponentsDataHours from '../ComponentsDataHours';
 
 export const LoginPage = () => {
@@ -20,7 +20,7 @@ export const LoginPage = () => {
 
   const navigate = (job) => {
     const routesMap = { // this object is called map
-      mesonero: "./portal-mesero",
+      mesero: "./portalmesero",
       cocinero: "./cocina"
     }
     // routesMap["mesero"] is the same as routesMap.mesero
@@ -57,13 +57,13 @@ export const LoginPage = () => {
    }); // end catch
  }
 
-  return (    
-    <div className="App">    
-    <div className='fondo'>   
-      <div id='contenedorLogin'>     
+  return (
+    <div className="App">
+    <div className='fondo'>
+      <div id='contenedorLogin'>
         <div className='dia'>
           <ComponentsDataHours />
-          </div> 
+          </div>
             <input
               className='inputRegistro'
               placeholder='Ingrese su email'

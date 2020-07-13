@@ -17,11 +17,11 @@ export const HomePage = () => {
             <ComponentsDataHours />
 
           </div>
-          <Link to='/portaladministrador'><button className='btnEntrada' >Administrador</button></Link>
+          <Link to='/register'><button className='btnEntrada' >Administrador</button></Link>
 
-          <Link to='/portalcocina'><button className='btnEntrada' >Cocina</button></Link>
+          <Link to='/register'><button className='btnEntrada' >Cocina</button></Link>
 
-          <Link to='/portalmesero'><button className='btnEntrada'>Mesonero</button></Link>
+          <Link to='/register'><button className='btnEntrada'>Mesonero</button></Link>
 
         </div>
       </div>
