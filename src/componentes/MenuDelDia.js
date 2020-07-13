@@ -2,10 +2,14 @@ import React from 'react';
 import '../img/Menu.css'
 import '../img/CalcularCuenta.css'
 import BotonMenu from './BotonMenu.componente';
-import { hamburguesas } from './Data';
+import { hamburguesas, liquidosFrios, bebidas } from './Data';
 
 
 class MenuDelDia extends React.Component {
+
+    guardarPedido = () => {
+
+    }
 
     render() {
         return (
@@ -15,44 +19,54 @@ class MenuDelDia extends React.Component {
                     <div className='contenedorBtnsMenu'>
                         <p className='categoria'>Res</p>
                         {
-                            data.filter(hamburguesas => hamburguesas.id === 4).map(hamburguesas => {
-                                return <BotonMenu name={item.name} valor={}/>;
+                            hamburguesas.filter(hamburguesa => hamburguesa.id <= 4 ).map(item => {
+                                return <BotonMenu className='hamburguesa'><p>{item.name}</p> <p>${item.valor}</p> </BotonMenu>
                             })
                         }
                         <p className='categoria'>Pollo</p>
-                        <BotonMenu className='hamburguesa'>Hamburguesa de <br />pollo La Clasica <br />$5.000</BotonMenu>
-                        <BotonMenu className='hamburguesa'>Hamburguesa de <br />pollo La Campestre <br />$6.000</BotonMenu>
+                        {
+                            hamburguesas.filter(hamburguesa => hamburguesa.id >4 && hamburguesa.id <= 6 ).map(item => {
+                                return <BotonMenu className='hamburguesa'><p>{item.name}</p> <p>${item.valor}</p> </BotonMenu>
+                            })
+                        }
                     </div>
 
-                    {
-                        data.filter( hamburguesas=> hamburguesas.id => 4).map(item => {
-                            return <ComponenteBoton name={hamburguesas.name} valor={hamburguesas} />;
-                        })
-                    }
+
                     <div className='contenedorBtnsMenu'>
                         <p className='categoria'>Pollo</p>
-                        <BotonMenu className='hamburguesa'>Hamburguesa de <br />pollo La Chapetona <br />$6.500</BotonMenu>
-                        <BotonMenu className='hamburguesa'>Hamburguesa de <br />pollo A Caballo <br />$6.500</BotonMenu>
+                        {
+                            hamburguesas.filter(hamburguesa => hamburguesa.id >6 && hamburguesa.id <= 8 ).map(item => {
+                                return <BotonMenu className='hamburguesa'><p>{item.name}</p> <p>${item.valor}</p> </BotonMenu>
+                            })
+                        }
                         <p className='categoria'>Vegetariano</p>
-                        <BotonMenu className='hamburguesa'>Hamburguesa <br />vegetariana Coccon <br />$5.000</BotonMenu>
-                        <BotonMenu className='hamburguesa'>Hamburguesa <br />vegetariana Burrok <br />$6.000</BotonMenu>
-                        <BotonMenu className='hamburguesa'>Hamburguesa <br />vegetariana Mundial <br />$6.500</BotonMenu>
-                        <BotonMenu className='hamburguesa'>Hamburguesa <br />vegetariana Colores <br />$6.500</BotonMenu>
+                        {
+                            hamburguesas.filter(hamburguesa => hamburguesa.id >8 && hamburguesa.id <= 12 ).map(item => {
+                                return <BotonMenu className='hamburguesa'><p>{item.name}</p> <p>${item.valor}</p> </BotonMenu>
+                            })
+                        }
 
                     </div>
 
                     <div className='contenedorBtnsMenu'>
                         <p className='categoria'>Jugos Naturales</p>
-                        <BotonMenu className='liquidosFrios'>Jugo natural piña <br /> $3.500 </BotonMenu>
-                        <BotonMenu className='liquidosFrios'>Jugo natural frambuesa <br />$3.500</BotonMenu>
-                        <BotonMenu className='liquidosFrios'>Jugo natural frutilla <br />$3.500</BotonMenu>
-                        <BotonMenu className='liquidosFrios'>jugo natural naranja <br />$3.500</BotonMenu>
+                        {
+                            liquidosFrios.filter(liquido => liquido.id <= 4  ).map(item => {
+                                return <BotonMenu className='liquidosFrios'><p>{item.name}</p> <p>${item.valor}</p> </BotonMenu>
+                            })
+                        }
                         <p className='categoria'>Limonada</p>
-                        <BotonMenu className='liquidosFrios'>Limonada dulce <br />$3.000</BotonMenu>
+                        {
+                            liquidosFrios.filter(liquido => liquido.id === 5  ).map(item => {
+                                return <BotonMenu className='liquidosFrios'><p>{item.name}</p> <p>${item.valor}</p> </BotonMenu>
+                            })
+                        }
                         <p className='categoria'>Bebidas</p>
-                        <BotonMenu className='liquidosFrios'>Bebida Coca-cola <br />$2.000</BotonMenu>
-                        <BotonMenu className='liquidosFrios'>Bebida Fanta <br />$2.000</BotonMenu>
-                        <BotonMenu className='liquidosFrios'>Bebida Sprite<br />$2.000</BotonMenu>
+                        {
+                            bebidas.filter(bebida => bebida.id <= 3  ).map(item => {
+                                return <BotonMenu className='liquidosFrios'><p>{item.name}</p> <p>${item.valor}</p> </BotonMenu>
+                            })
+                        }
                     </div>
 
 

@@ -49,6 +49,7 @@
     
     .liquidoCaliente {
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         width: 150px;
@@ -61,8 +62,15 @@
         font-size: 15px;
     }
     
+    .liquidoCaliente > p {
+        padding: 0px;
+        margin: 0px;
+    }
+
+    
     .sandwich {
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         width: 170px;
@@ -75,10 +83,16 @@
         font-size: 15px;  
     }
 
+    .sandwich > p {
+        padding: 0px;
+        margin: 0px;
+    }
+
     /* Menú Del Día*/
 
     .liquidosFrios {
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         width: 170px;
@@ -89,10 +103,16 @@
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         margin: 10px 0px 10px 0px;
         font-size: 15px;
-    }    
+    }   
+    
+    .liquidosFrios > p {
+        padding: 0px;
+        margin: 0px;
+    }
 
     .hamburguesa {
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         width: 170px;
@@ -103,6 +123,10 @@
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         margin: 17px 0px 17px 0px;
         font-size: 15px;  
-    
+    }
+
+    .hamburguesa > p {
+        padding: 0px;
+        margin: 0px;
     }
 }

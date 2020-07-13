@@ -1,7 +1,7 @@
 import React from 'react';
-import '../img/Menu.css'
-import CalcularCuenta from '../componentes/CalcularCuenta';
+import '../img/Menu.css';
 import BotonMenu from './BotonMenu.componente';
+import { liquidosCalientes, sandwich, liquidosFrios } from './Data';
 
 
 class MenuDesayuno extends React.Component {
@@ -13,38 +13,67 @@ class MenuDesayuno extends React.Component {
                 <div className='btnsMenuPedido'>
                     <div className='contenedorBtnsMenu'>
                         <p className='categoria'>Café</p>
-                        <BotonMenu className='liquidoCaliente'>Café americano <br />$3.000</BotonMenu>
-                        <BotonMenu className='liquidoCaliente'>Café con leche <br />$4.000</BotonMenu>
-                        <BotonMenu className='liquidoCaliente'>Capuchino <br />$4.000</BotonMenu>
-                        <BotonMenu className='liquidoCaliente'>Café mocca<br />$5.000</BotonMenu>
+                        {
+                            liquidosCalientes.filter(liquido => liquido.id <= 4 ).map(item => {
+                                return <BotonMenu className='liquidoCaliente'><p>{item.name}</p> <p>${item.valor}</p> </BotonMenu>
+                            })
+                        }
                         <p className='categoria'>Té</p>
-                        <BotonMenu className='liquidoCaliente'>Té negro <br />$3.000</BotonMenu>
+                        {
+                            liquidosCalientes.filter(liquido => liquido.id === 5 ).map(item => {
+                                return <BotonMenu className='liquidoCaliente'><p>{item.name}</p> <p>${item.valor}</p> </BotonMenu>
+                            })
+                        }
                     </div>
 
                     <div className='contenedorBtnsMenu'>
                         <p className='categoria'>Jugos Naturales</p>
-                        <BotonMenu className='liquidosFrios'>Jugo natural piña <br />$3.500</BotonMenu>
-                        <BotonMenu className='liquidosFrios'>Jugo natural frambuesa <br />$3.500</BotonMenu>
-                        <BotonMenu className='liquidosFrios'>Jugo natural frutilla <br />$3.500</BotonMenu>
-                        <BotonMenu className='liquidosFrios'>jugo natural naranja<br />$3.500</BotonMenu>
+                        {
+                            liquidosFrios.filter(liquido => liquido.id <= 4  ).map(item => {
+                                return <BotonMenu className='liquidosFrios'><p>{item.name}</p> <p>${item.valor}</p> </BotonMenu>
+                            })
+                        }
                         <p className='categoria'>Limonada</p>
-                        <BotonMenu className='liquidosFrios'>Limonada dulce <br />$3.000</BotonMenu>
+                        {
+                            liquidosFrios.filter(liquido => liquido.id === 5  ).map(item => {
+                                return <BotonMenu className='liquidosFrios'><p>{item.name}</p> <p>${item.valor}</p> </BotonMenu>
+                            })
+                        }
                     </div>
 
                     <div className='contenedorBtnsMenu'>
                         <p className='categoria'>Sandwich</p>
-                        <BotonMenu className='sandwich'>Sandwich de<br /> jamón y queso<br />$4.000</BotonMenu>
-                        <BotonMenu className='sandwich'>Sandwich de<br />huevo cibullete<br />$4.000</BotonMenu>
-                        <BotonMenu className='sandwich'>Sandwich de<br />pollo pimentón<br />$5.000</BotonMenu>
+                        {
+                            sandwich.filter(sandwich => sandwich.id <= 3  ).map(item => {
+                                return <BotonMenu className='sandwich'><p>{item.name}</p> <p>${item.valor}</p> </BotonMenu>
+                            })
+                        }
                         <p className='categoria'>Vegetariano</p>
-                        <BotonMenu className='sandwich'>Sandwich de<br />verduras asadas<br />$5.000</BotonMenu>
+                        {
+                            sandwich.filter(liquido => liquido.id === 4  ).map(item => {
+                                return <BotonMenu className='sandwich'><p>{item.name}</p> <p>${item.valor}</p> </BotonMenu>
+                            })
+                        }
                     </div>
 
 
                 </div>
-                <div className='espacioCalculadora'>
-                    <CalcularCuenta />
-                </div>    
+                <div className='calcularCompra'>
+                    <div className='primeraLinea'>
+                        <input className='nombreCliente' type='text' placeholder='Nombre Cliente'></input>
+                        <input className='mesa' type='text' placeholder='Mesa'></input>
+                    </div>
+                    <input className='nombreCliente' type='text' placeholder='Nota del pedido'></input>
+                    <div className='detalleCompra'>
+
+                    </div>
+
+                    <div className='confirmarCompra'>
+                        <button className='enviarCocina'>Enviar a la cocina</button>
+                        <p className='totalPagar'>Total $3.000</p>
+                    </div>
+
+                </div>
             </div>
 
         );

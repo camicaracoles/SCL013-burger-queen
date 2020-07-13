@@ -181,28 +181,31 @@ export const bebidas = [
         id: 3,
         name: 'Bebida Sprite',
         valor: 2000  
+    }
+    
+];
+
+export const adicionales = [
+    {
+        id: 1,
+        name: 'Adicional huevo',
+        valor: 1000  
+    },
+    {
+        id: 3,
+        name: 'Adicional Queso',
+        valor: 2000  
+    },
+    {
+        id: 3,
+        name: 'Mayonesa',
+        valor: 700  
     },
     {
         id: 4,
         name: 'Adicional palta',
         valor: 1500  
-    },
-    {
-        id: 5,
-        name: 'Adicional huevo',
-        valor: 1000  
-    },
-    {
-        id: 6,
-        name: 'Adicional Queso',
-        valor: 2000  
-    },
-    {
-        id: 7,
-        name: 'Mayonesa',
-        valor: 70  
     }
-    
 ];
 
 export default [liquidosCalientes, liquidosFrios, sandwich, hamburguesas, bebidas] ;
