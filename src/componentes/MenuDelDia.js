@@ -18,11 +18,13 @@ class MenuDelDia extends React.Component {
                 <div className='btnsMenuPedido'>
                     <div className='contenedorBtnsMenu'>
                         <p className='categoria'>Res</p>
+
                         {
                             hamburguesas.filter(hamburguesa => hamburguesa.id <= 4 ).map(item => {
                                 return <BotonMenu className='hamburguesa'><p>{item.name}</p> <p>${item.valor}</p> </BotonMenu>
                             })
                         }
+
                         <p className='categoria'>Pollo</p>
                         {
                             hamburguesas.filter(hamburguesa => hamburguesa.id >4 && hamburguesa.id <= 6 ).map(item => {
