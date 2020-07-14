@@ -3,7 +3,6 @@ import '../img/Menu.css';
 import BotonMenu from './BotonMenu.componente';
 import { liquidosCalientes, sandwich, liquidosFrios } from './Data';
 
-
 class MenuDesayuno extends React.Component {
 
     render() {
@@ -14,13 +13,13 @@ class MenuDesayuno extends React.Component {
                     <div className='contenedorBtnsMenu'>
                         <p className='categoria'>Café</p>
                         {
-                            liquidosCalientes.filter(liquido => liquido.id <= 4 ).map(item => {
+                            liquidosCalientes.filter(liquido => liquido.id <= 4).map(item => {
                                 return <BotonMenu className='liquidoCaliente'><p>{item.name}</p> <p>${item.valor}</p> </BotonMenu>
                             })
                         }
                         <p className='categoria'>Té</p>
                         {
-                            liquidosCalientes.filter(liquido => liquido.id === 5 ).map(item => {
+                            liquidosCalientes.filter(liquido => liquido.id === 5).map(item => {
                                 return <BotonMenu className='liquidoCaliente'><p>{item.name}</p> <p>${item.valor}</p> </BotonMenu>
                             })
                         }
@@ -29,13 +28,13 @@ class MenuDesayuno extends React.Component {
                     <div className='contenedorBtnsMenu'>
                         <p className='categoria'>Jugos Naturales</p>
                         {
-                            liquidosFrios.filter(liquido => liquido.id <= 4  ).map(item => {
+                            liquidosFrios.filter(liquido => liquido.id <= 4).map(item => {
                                 return <BotonMenu className='liquidosFrios'><p>{item.name}</p> <p>${item.valor}</p> </BotonMenu>
                             })
                         }
                         <p className='categoria'>Limonada</p>
                         {
-                            liquidosFrios.filter(liquido => liquido.id === 5  ).map(item => {
+                            liquidosFrios.filter(liquido => liquido.id === 5).map(item => {
                                 return <BotonMenu className='liquidosFrios'><p>{item.name}</p> <p>${item.valor}</p> </BotonMenu>
                             })
                         }
@@ -44,13 +43,13 @@ class MenuDesayuno extends React.Component {
                     <div className='contenedorBtnsMenu'>
                         <p className='categoria'>Sandwich</p>
                         {
-                            sandwich.filter(sandwich => sandwich.id <= 3  ).map(item => {
+                            sandwich.filter(sandwich => sandwich.id <= 3).map(item => {
                                 return <BotonMenu className='sandwich'><p>{item.name}</p> <p>${item.valor}</p> </BotonMenu>
                             })
                         }
                         <p className='categoria'>Vegetariano</p>
                         {
-                            sandwich.filter(liquido => liquido.id === 4  ).map(item => {
+                            sandwich.filter(liquido => liquido.id === 4).map(item => {
                                 return <BotonMenu className='sandwich'><p>{item.name}</p> <p>${item.valor}</p> </BotonMenu>
                             })
                         }
@@ -65,7 +64,7 @@ class MenuDesayuno extends React.Component {
                     </div>
                     <input className='nombreCliente' type='text' placeholder='Nota del pedido'></input>
                     <div className='detalleCompra'>
-
+        
                     </div>
 
                     <div className='confirmarCompra'>
@@ -78,6 +77,7 @@ class MenuDesayuno extends React.Component {
 
         );
     }
+
 }
 
 export default MenuDesayuno;

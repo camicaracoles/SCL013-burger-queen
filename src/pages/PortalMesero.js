@@ -7,6 +7,7 @@ import MenuDelDia from '../componentes/MenuDelDia';
 import flecha from '../img/flecha.png';
 import PedidosListos from '../componentes/PedidosListos';
 import PedidosServidos from '../componentes/PedidosServidos';
+import PedidosPagados from '../componentes/PedidosPagados';
 
 
 
@@ -34,6 +35,9 @@ export class PortalMesero extends React.Component {
       case 'pedidosPagados':
         this.setState({ estado: 5 })
         break;
+      case 'precionarBotonMenu':
+        this.setState({ estado: 6 })
+        break;
       default:
         this.setState({ estado: 0 })
         break;
@@ -50,6 +54,10 @@ export class PortalMesero extends React.Component {
         return <PedidosListos handler={this.navegarHacia} />;
       case 4:
         return <PedidosServidos handler={this.navegarHacia} />;
+      case 5:
+        return <PedidosPagados handler={this.navegarHacia} />;
+      case 6:
+        return <PedidosPagados handler={this.navegarHacia} />;
       default:
         return <EntradaMesero handler={this.navegarHacia} />;
     }
