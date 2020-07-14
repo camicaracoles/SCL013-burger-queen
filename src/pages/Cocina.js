@@ -1,6 +1,6 @@
 import React from 'react';
 import ComponentsDataHours from '../componentes/ComponentsDataHours';
-import '../img/PortalMesero.css';
+import '../img/PortalCocina.css';
 
 export class Cocina extends React.Component {
   render() {
@@ -44,5 +44,6 @@ export class Cocina extends React.Component {
       </div>
     )
   }
-}
+};
+
 // linea 9 concatenar el nombre del usuario Jefe de cocina
