@@ -17,13 +17,49 @@ let  [valor, setValor] = useState('');
 
   };
 
-  const crearPedido = () =>{
-    db.collection('pedido').doc().set({
-      cliente:cliente,
-      producto:name,
-      valor:valor,
-    })
-  }
+  const resetState =  () => {
+    setSelectedItems([]);
+  };
+
+  const saveOrder = async (item = {}) => {
+    try {
+      const userId = auth.currentUser.uid;
+      const userRef = await db.collection("usuario").doc(userId)
+      const user = await userRef.get();
+      if (user.exists) {
+         const mesoneroName =  user.data().name;
+
+         await db.collection('pedido').doc().set({
+          ...item,
+          mesonero: mesoneroName
+        })
+      } else {
+        alert("Usuario no encontrado");
+      }
+      resetState();
+      alert("Orden enviada");
+    } catch (error) {
+      console.error(`Ocurrió un error ${error.message}`)
+    }
+  };
+
+  const handleSendOrder = () => {
+    const order = {
+      menuType,
+      selectedItems,
+      mesa,
+      producto,
+      cliente
+    }
+    saveOrder(order)
+    alert("enviando orden...")
+  };
+
+ const handleDeleteClick = (deleteID)=>{
+   const filterItem = selectedItems.filter(({ id }) => id !== deleteID)
+   setSelectedItems (filterItem)
+ }
+
 
   return (
     <div className="App">
@@ -50,7 +86,8 @@ let  [valor, setValor] = useState('');
           </div>
         ))}
        <div className="App-list__item App-list__total">
-          Total{" "}
+         <hr/>
+          Total {" "}
           <span>
             $
             {selectedItems
@@ -59,10 +96,11 @@ let  [valor, setValor] = useState('');
           </span>
         </div>
         {selectedItems.length > 0 && (
-        <button type="button" title='Enviar a Cocina'  onClick={crearPedido}
+        <button type="button" title='Enviar a Cocina'
+        onClick={handleSendOrder}
           color="danger">Enviar a cocina</button>
         )}
-     
+
     </div>
   </div>
 );
