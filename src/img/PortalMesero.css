@@ -12,11 +12,11 @@
         box-sizing: border-box;
     }
 
-    #nombreMesero {
+    .nombreTrabajador {
         margin: 0px 0px 0px 30px;
     }
 
-    #diaPortalMesero {
+    .diaVistas {
         margin: 0px 0px 0px 400px;
     }
 

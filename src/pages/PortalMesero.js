@@ -71,8 +71,8 @@ export class PortalMesero extends React.Component {
     return (
       <div>
         <div className='franja'>
-          <p id='nombreMesero'>Camila García Brito</p>
-          <div id='diaPortalMesero'>
+          <p id='nombreTrabajador'>Camila García Brito</p>
+          <div id='diaVistas'>
 
             <ComponentsDataHours />
 
