@@ -64,7 +64,6 @@ class MenuDesayuno extends React.Component {
                     </div>
                     <input className='nombreCliente' type='text' placeholder='Nota del pedido'></input>
                     <div className='detalleCompra'>
-        
                     </div>
 
                     <div className='confirmarCompra'>

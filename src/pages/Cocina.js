@@ -6,10 +6,10 @@ export class Cocina extends React.Component {
   render() {
     return (
       <div>
-        <div className='franja'>
+       <div className='franjaCocina'>
           <p className='nombreTrabajador'>Catalina Retamal</p>
           <div className='diaVistas'>
-
+            
             <ComponentsDataHours />
 
           </div>
