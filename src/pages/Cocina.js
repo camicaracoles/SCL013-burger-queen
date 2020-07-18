@@ -7,37 +7,45 @@ export class Cocina extends React.Component {
     return (
       <div>
        <div className='franjaCocina'>
-          <p className='nombreTrabajador'>Catalina Retamal</p>
+          <p className='nombreTrabajadorCocina'>Catalina Retamal</p>
           <div className='diaVistas'>
             
             <ComponentsDataHours />
 
           </div>
         </div>
+       
+        <div className='lineaSubtitulo'>
+          <p className='subTitulo'>Pedidos por hacer</p>
+          <p className='subTituloDos'>Lista Pedidos Entregados</p>
+        </div>
+        
+
         <div className='fondoCocina'>
-
           <div className='contenedorPedidos'>
-            <p className='subTitulo'>Pedidos por hacer</p>
             <div className='formatoPedido'>
-              <p className='1'>Nombre Cliente</p>
-              <p className='1'> Hora de entrada</p>
-              <p className='2'>Nombre Mesero</p>
-              <p className='2'>Tipo menú</p>
-              <p className='3'>Detalle Menú</p>
-              <button className='listo'>Listo</button>
+              <div className='lineaUno'>
+                <p>Nombre Cliente</p>
+                <p> Hora de entrada</p>
+              </div>
+              <div className='lineaDos'>
+                <p>Nombre Mesero</p>
+                <p>Tipo menú</p>
+              </div>
+              <div className='detalleMenú'>
+                
+              </div>
+              <button id='listo'>Listo</button>
             </div>
-
           </div>
 
           <div className='listaEntregados'>
-            <p className='subTitulo'>Pedidos por hacer</p>
-            <div id='lineaEntregados'>
+            
+            <div className='contenedorEntregados'>
               <p>Nombre del cleinte</p>
               <p>Hora entrada pedido</p>
               <p>Hora salida pedido</p>
             </div>
-
-
           </div>
 
         </div>

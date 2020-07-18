@@ -2,6 +2,8 @@ import React from 'react';
 import '../img/Menu.css';
 import BotonMenu from './BotonMenu.componente';
 import { liquidosCalientes, sandwich, liquidosFrios } from './Data';
+import 'firebase/auth';
+
 
 class MenuDesayuno extends React.Component {
 

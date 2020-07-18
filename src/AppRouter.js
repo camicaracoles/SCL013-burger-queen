@@ -7,6 +7,7 @@ import { PortalMesero } from './pages/PortalMesero';
 import { PortalAdministrador} from './pages/PortalAdministrador';
 import { LoginPage } from './pages/LoginPage';
 
+
 export const AppRouter = () => {
 
   return (
@@ -20,6 +21,7 @@ export const AppRouter = () => {
           <Route path="/portalmesero" component={PortalMesero} />
           <Route path="/" component={HomePage} />
           <Route path='/administrador' component={PortalAdministrador} />
+      
         </Switch>
       </div>
     </Router>

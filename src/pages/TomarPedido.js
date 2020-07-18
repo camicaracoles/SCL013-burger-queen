@@ -2,14 +2,14 @@ import React, { useState } from "react";
 import '../img/Menu.css'
 import menu from '../menu.json';
 import 'firebase/auth';
-import { db } from '../firebase-Config';
+import { db, auth } from '../firebaseConfig';
 
 export default function TomarPedido() {
   const [menuType, setMenuType] = useState("cafe");
   const [selectedItems, setSelectedItems] = useState([]);
-let  [name, setName] = useState('');
-let  [cliente, setCliente] = useState('');
-let  [valor, setValor] = useState('');
+  let [name, setName] = useState('');
+  let [cliente, setCliente] = useState('');
+  let [valor, setValor] = useState('');
   const handleItemClick = item => {
     // Incluye la logica para saber cuando el elemento
     // ya existe en el arreglo.
@@ -17,7 +17,7 @@ let  [valor, setValor] = useState('');
 
   };
 
-  const resetState =  () => {
+  const resetState = () => {
     setSelectedItems([]);
   };
 
@@ -27,9 +27,9 @@ let  [valor, setValor] = useState('');
       const userRef = await db.collection("usuario").doc(userId)
       const user = await userRef.get();
       if (user.exists) {
-         const mesoneroName =  user.data().name;
+        const mesoneroName = user.data().name;
 
-         await db.collection('pedido').doc().set({
+        await db.collection('pedido').doc().set({
           ...item,
           mesonero: mesoneroName
         })
@@ -47,46 +47,44 @@ let  [valor, setValor] = useState('');
     const order = {
       menuType,
       selectedItems,
-      mesa,
-      producto,
+      
       cliente
     }
     saveOrder(order)
     alert("enviando orden...")
   };
 
- const handleDeleteClick = (deleteID)=>{
-   const filterItem = selectedItems.filter(({ id }) => id !== deleteID)
-   setSelectedItems (filterItem)
- }
-
+  const handleDeleteClick = (deleteID) => {
+    const filterItem = selectedItems.filter(({ id }) => id !== deleteID)
+    setSelectedItems(filterItem)
+  }
 
   return (
     <div className="App">
-    <div className="App-menu">
-      {Object.keys(menu).map(item => (
-        <button className="App-menu__type" onClick={() => setMenuType(item)}>
-          {item}
-        </button>
-      ))}
-      <br />
-      <br />
-      <input className='inputRegistro' placeholder='Ingrese nombre de cliente' type='text'id='nombre' value ={cliente} onChange={(ev)=> setCliente(ev.target.value)}></input>
-      {menu[menuType].map(item => (
-        <div className="App-menu__item" onClick={() => handleItemClick(item)}>
-          {item.name} <span>${item.valor}</span>
-        </div>
-      ))}
-    </div>
-    <div className="App-list">
-      {selectedItems &&
-        selectedItems.map(item => (
-          <div className="App-list__item">
-           {name= item.name} <span> {valor= item.valor}</span>
+      <div className="App-menu">
+        {Object.keys(menu).map(item => (
+          <button className="App-menu__type" onClick={() => setMenuType(item)}>
+            {item}
+          </button>
+        ))}
+        <br />
+        <br />
+        <input className='inputRegistro' placeholder='Ingrese nombre de cliente' type='text' id='nombre' value={cliente} onChange={(ev) => setCliente(ev.target.value)}></input>
+        {menu[menuType].map(item => (
+          <div className="App-menu__item" onClick={() => handleItemClick(item)}>
+            {item.name} <span>${item.valor}</span>
           </div>
         ))}
-       <div className="App-list__item App-list__total">
-         <hr/>
+      </div>
+      <div className="App-list">
+        {selectedItems &&
+          selectedItems.map(item => (
+            <div className="App-list__item">
+              {name = item.name} <span> {valor = item.valor}</span>
+            </div>
+          ))}
+        <div className="App-list__item App-list__total">
+          <hr />
           Total {" "}
           <span>
             $
@@ -96,12 +94,12 @@ let  [valor, setValor] = useState('');
           </span>
         </div>
         {selectedItems.length > 0 && (
-        <button type="button" title='Enviar a Cocina'
-        onClick={handleSendOrder}
-          color="danger">Enviar a cocina</button>
+          <button type="button" title='Enviar a Cocina'
+            onClick={handleSendOrder}
+            color="danger">Enviar a cocina</button>
         )}
 
+      </div>
     </div>
-  </div>
-);
+  );
 }

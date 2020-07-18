@@ -1,7 +1,7 @@
 import React from 'react';
 import '../img/PortalMesero.css'
 import ComponentsDataHours from '../componentes/ComponentsDataHours';
-import EntradaMesero from '../componentes/EntradaMesero';
+import EntradaMesero from '../pages/TomarPedido';
 import MenuDesayuno from '../componentes/MenuDesayuno';
 import MenuDelDia from '../componentes/MenuDelDia';
 import flecha from '../img/flecha.png';

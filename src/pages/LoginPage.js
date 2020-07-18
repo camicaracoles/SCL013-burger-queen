@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom';
 import '../img/App.css';
 import 'firebase/auth';
 import {Link} from 'react-router-dom';
-import { db, auth } from '../componentes/firebaseConfig';
+import { db, auth } from '../firebaseConfig';
 import ComponentsDataHours from '../ComponentsDataHours';
 
 export const LoginPage = () => {
