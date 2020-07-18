@@ -1,71 +1,48 @@
-import React, {useState} from 'react';
-import { Cronometro } from './Cronometro';
-import BtnCronometro from './BtnCronometro';
-import PedidoCocina from './PedidoCocina';
+import React from 'react';
+import ComponentsDataHours from '../componentes/ComponentsDataHours';
+import '../img/PortalCocina.css';
 
-export const Cocina = () =>{
-  const [time, setTime] = useState({ms:0, s:0, m:0, h:0});
-  const [interv, setInterv] = useState();
-  const [status, setStatus] = useState(0);
-  // Not started = 0
-  // started = 1
-  // stopped = 2
+export class Cocina extends React.Component {
+  render() {
+    return (
+      <div>
+        <div className='franjaCocina'>
+          <p className='nombreTrabajador'>Catalina Retamal</p>
+          <div className='diaVistas'>
 
-  const start = () => {
-    run();
-    setInterv(setInterval(run, 10));
-    setStatus(1);
-  };
+            <ComponentsDataHours />
 
-  let updateMs = time.ms,
-  updateS = time.s,
-  updateM = time.m,
-  updateH = time.h;
-
-  const run = () => {
-    if (updateM === 60){
-      updateH++;
-      updateM =0;
-    }
-    if (updateS === 60){
-      updateM++;
-      updateS =0;
-    }
-    if (updateMs === 100){
-      updateS++;
-      updateMs =0;
-    }
-    updateMs++;
-    return setTime({ms:updateMs,
-       s:updateS,
-        m:updateM,
-         h:updateH})
-  }
-  const stop = () => {
-    clearInterval(interv);
-    setStatus(2);
-  };
-
-  const reset = () => {
-    clearInterval(interv);
-    setStatus(0);
-    setTime({ms:0, s:0, m:0, h:0})
-  };
-
-  const resume = () => start();
-
-  return(
-    <div className='main-section'>
-      PORTAL DE COCINERO
-    <div className='clock-holder'>
-      <div className='stopwath'>
-     <Cronometro time={time}/>
-     <BtnCronometro status={status} resume={resume} reset={reset} stop={stop} start={start}/>
-     <PedidoCocina/>
           </div>
-    </div>
+        </div>
+        <div className='fondoCocina'>
+
+          <div className='contenedorPedidos'>
+            <p className='subTitulo'>Pedidos por hacer</p>
+            <div className='formatoPedido'>
+              <p className='1'>Nombre Cliente</p>
+              <p className='1'> Hora de entrada</p>
+              <p className='2'>Nombre Mesero</p>
+              <p className='2'>Tipo menú</p>
+              <p className='3'>Detalle Menú</p>
+              <button className='listo'>Listo</button>
+            </div>
+
+          </div>
+
+          <div className='listaEntregados'>
+            <p className='subTitulo'>Pedidos por hacer</p>
+            <div id='lineaEntregados'>
+              <p>Nombre del cleinte</p>
+              <p>Hora entrada pedido</p>
+              <p>Hora salida pedido</p>
+            </div>
 
 
-</div>
-);
-}
+          </div>
+
+        </div>
+      </div>
+    )
+  }
+};
+
