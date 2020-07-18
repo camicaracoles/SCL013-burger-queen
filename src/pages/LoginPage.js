@@ -3,11 +3,7 @@ import { useHistory } from 'react-router-dom';
 import '../img/App.css';
 import 'firebase/auth';
 import {Link} from 'react-router-dom';
-<<<<<<< HEAD
-import { db, auth } from '../firebaseConfig';
-=======
 import { db, auth } from '../firebase-Config';
->>>>>>> 5fb9132b7d4b2ae78c5bbace084aed1ba232facd
 import ComponentsDataHours from '../ComponentsDataHours';
 import { saveUserInLocalStorage } from "../helpers/session-service";
 
