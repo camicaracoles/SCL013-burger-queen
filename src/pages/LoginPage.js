@@ -1,10 +1,15 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import '../img/App.css';
 import 'firebase/auth';
 import {Link} from 'react-router-dom';
+<<<<<<< HEAD
 import { db, auth } from '../firebaseConfig';
+=======
+import { db, auth } from '../firebase-Config';
+>>>>>>> 5fb9132b7d4b2ae78c5bbace084aed1ba232facd
 import ComponentsDataHours from '../ComponentsDataHours';
+import { saveUserInLocalStorage } from "../helpers/session-service";
 
 export const LoginPage = () => {
   const history = useHistory();
@@ -20,23 +25,26 @@ export const LoginPage = () => {
 
   const navigate = (job) => {
     const routesMap = { // this object is called map
-      mesero: "./portalmesero",
+      mesonero: "./portal-mesero",
       cocinero: "./cocina"
-    }
+    };
     // routesMap["mesero"] is the same as routesMap.mesero
     history.push(routesMap[job]);
   };
+
 
   const login = () => {
    auth.signInWithEmailAndPassword(email,password)
     .then(async res => {
       const userId = res.user.uid;
-
-      const docRef = await db.collection("usuario").doc(userId);
+      const docRef = db.collection("usuario").doc(userId);
       docRef.get()
         .then((userDoc) => {
           if (userDoc.exists) {
-            navigate(userDoc.data().job);
+            const userData = userDoc.data();
+            // save the user data in userDoc.data() in the local storage
+            saveUserInLocalStorage(userData);
+            navigate(userData.job);
           } else {
             console.log("No such document");
             alert("No encontramos el usuario especificado");
@@ -57,13 +65,13 @@ export const LoginPage = () => {
    }); // end catch
  }
 
-  return (
-    <div className="App">
-    <div className='fondo'>
-      <div id='contenedorLogin'>
+  return (    
+    <div className="App">    
+    <div className='fondo'>   
+      <div id='contenedorLogin'>     
         <div className='dia'>
           <ComponentsDataHours />
-          </div>
+          </div> 
             <input
               className='inputRegistro'
               placeholder='Ingrese su email'
