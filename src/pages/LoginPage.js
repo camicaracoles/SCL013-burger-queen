@@ -61,13 +61,13 @@ export const LoginPage = () => {
    }); // end catch
  }
 
-  return (    
-    <div className="App">    
-    <div className='fondo'>   
-      <div id='contenedorLogin'>     
+  return (
+    <div className="App">
+    <div className='fondo'>
+      <div id='contenedorLogin'>
         <div className='dia'>
           <ComponentsDataHours />
-          </div> 
+          </div>
             <input
               className='inputRegistro'
               placeholder='Ingrese su email'
@@ -107,3 +107,4 @@ export const LoginPage = () => {
     </div>
   );
 }
+

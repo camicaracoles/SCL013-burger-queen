@@ -13,4 +13,3 @@ export const logout = async () => {
       return false;
     }
   }
-  

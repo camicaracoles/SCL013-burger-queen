@@ -11,7 +11,7 @@ export default function TomarPedido() {
  // let [producto, setProducto] = useState('');
  // let  [valor, setValor] = useState('');
 
-  
+
 
   const resetState =  () => {
     setSelectedItems([]);
@@ -69,12 +69,12 @@ export default function TomarPedido() {
 };
   return (
     <div className="App">
- 
+
     <div className="App-menu">
     <input className='inputRegistro' placeholder='Ingrese nombre de cliente' type='text'id='nombre' value ={cliente} onChange={(ev)=> setCliente(ev.target.value)}></input>
     <input className='inputRegistro' placeholder='Ingrese numero de mesa' type='text'id='mesa' value ={mesa} onChange={(ev)=> setMesa(ev.target.value)}></input>
     <br />
-    
+
       <br />
       {Object.keys(menu).map(item => (
         <button className="btnEntr" onClick={() => setMenuType(item)}>
@@ -83,7 +83,7 @@ export default function TomarPedido() {
       ))}
       <br />
       <br />
-      
+
       {menu[menuType].map(item => (
         <div className="App-menu__item" onClick={() => handleItemClick(item)}>
           {item.name} <span className='prueba'>${item.valor}</span>
@@ -110,11 +110,11 @@ export default function TomarPedido() {
           </span>
         </div>
         {selectedItems.length > 0 && (
-        <button type="button" title='Enviar a Cocina' 
+        <button type="button" title='Enviar a Cocina'
         onClick={handleSendOrder}
           color="danger">Enviar a cocina</button>
         )}
-     
+
     </div>
   </div>
 );

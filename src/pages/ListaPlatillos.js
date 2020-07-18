@@ -12,3 +12,4 @@ export const ListaPlatillos = ({ selectedItems = [] }) => {
     </ul>
   );
 };
+
