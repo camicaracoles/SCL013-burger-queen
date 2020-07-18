@@ -1,21 +1,17 @@
 import React, { useState } from "react";
-import '../img/Menu.css'
 import menu from '../menu.json';
 import 'firebase/auth';
-import { db } from '../firebase-Config';
+import { db, auth } from '../firebase-Config';
 
 export default function TomarPedido() {
-  const [menuType, setMenuType] = useState("cafe");
+  const [menuType, setMenuType] = useState("Café");
   const [selectedItems, setSelectedItems] = useState([]);
-let  [name, setName] = useState('');
-let  [cliente, setCliente] = useState('');
-let  [valor, setValor] = useState('');
-  const handleItemClick = item => {
-    // Incluye la logica para saber cuando el elemento
-    // ya existe en el arreglo.
-    setSelectedItems([...selectedItems, item]);
+  const  [cliente, setCliente] = useState('');
+  const  [mesa, setMesa] = useState('');
+ // let [producto, setProducto] = useState('');
+ // let  [valor, setValor] = useState('');
 
-  };
+  
 
   const resetState =  () => {
     setSelectedItems([]);
@@ -31,7 +27,9 @@ let  [valor, setValor] = useState('');
 
          await db.collection('pedido').doc().set({
           ...item,
-          mesonero: mesoneroName
+          mesonero: mesoneroName,
+          status: 'Pendiente',
+          date: new Date(),
         })
       } else {
         alert("Usuario no encontrado");
@@ -48,7 +46,6 @@ let  [valor, setValor] = useState('');
       menuType,
       selectedItems,
       mesa,
-      producto,
       cliente
     }
     saveOrder(order)
@@ -59,30 +56,47 @@ let  [valor, setValor] = useState('');
    const filterItem = selectedItems.filter(({ id }) => id !== deleteID)
    setSelectedItems (filterItem)
  }
-
-
+ const handleItemClick = item => {
+  // Incluye la logica para saber cuando el elemento
+  // ya existe en el arreglo.
+  setSelectedItems([...selectedItems, item]);
+/*  db.collection('pedido').doc().set({
+    cliente:cliente,
+    mesa:mesa,
+    producto:producto,
+    valor:valor,
+  })*/
+};
   return (
     <div className="App">
+ 
     <div className="App-menu">
+    <input className='inputRegistro' placeholder='Ingrese nombre de cliente' type='text'id='nombre' value ={cliente} onChange={(ev)=> setCliente(ev.target.value)}></input>
+    <input className='inputRegistro' placeholder='Ingrese numero de mesa' type='text'id='mesa' value ={mesa} onChange={(ev)=> setMesa(ev.target.value)}></input>
+    <br />
+    
+      <br />
       {Object.keys(menu).map(item => (
-        <button className="App-menu__type" onClick={() => setMenuType(item)}>
+        <button className="btnEntr" onClick={() => setMenuType(item)}>
           {item}
         </button>
       ))}
       <br />
       <br />
-      <input className='inputRegistro' placeholder='Ingrese nombre de cliente' type='text'id='nombre' value ={cliente} onChange={(ev)=> setCliente(ev.target.value)}></input>
+      
       {menu[menuType].map(item => (
         <div className="App-menu__item" onClick={() => handleItemClick(item)}>
-          {item.name} <span>${item.valor}</span>
+          {item.name} <span className='prueba'>${item.valor}</span>
         </div>
       ))}
     </div>
     <div className="App-list">
+      PEDIDO
       {selectedItems &&
         selectedItems.map(item => (
           <div className="App-list__item">
-           {name= item.name} <span> {valor= item.valor}</span>
+           {item.name} <span> {item.valor}</span>
+           <button onClick={()=> handleDeleteClick(item.id)}>Eliminar</button>
           </div>
         ))}
        <div className="App-list__item App-list__total">
@@ -96,11 +110,11 @@ let  [valor, setValor] = useState('');
           </span>
         </div>
         {selectedItems.length > 0 && (
-        <button type="button" title='Enviar a Cocina'
+        <button type="button" title='Enviar a Cocina' 
         onClick={handleSendOrder}
           color="danger">Enviar a cocina</button>
         )}
-
+     
     </div>
   </div>
 );
