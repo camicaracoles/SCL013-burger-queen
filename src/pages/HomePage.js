@@ -1,7 +1,7 @@
 import React from 'react';
 import '../img/App.css';
 import '../img/Inicio.css';
-import ComponentsDataHours from '../componentes/ComponentsDataHours';
+import ComponentsDataHours from '../ComponentsDataHours';
 import {Link} from 'react-router-dom';
 
 
