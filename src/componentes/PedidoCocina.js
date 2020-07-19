@@ -1,14 +1,14 @@
 import React, {useState, useEffect} from 'react';
-import {db} from '../firebase-Config'
+import {db} from '../firebaseConfig'
 import { ListaPlatillos } from './ListaPlatillos';
-
+import '../img/PortalCocina.css';
 
 export const PedidoCocina = () =>{
   const [pedidos, setPedidos]=useState([])
 
   useEffect(() => {
     obtenerPedidosPendientes()
-  }, 
+  },
   []);
 
   const actualizarPedidosPendientes = (data) => {
@@ -48,7 +48,7 @@ export const PedidoCocina = () =>{
   return (
     <div>
         PEDIDOS PENDIENTES
-      <div>      
+      <div>
         {
           // si pedido es undefined, le asignamos el valor {} por defecto
           pedidos.map((pedido = {}, indice) => {
@@ -57,15 +57,15 @@ export const PedidoCocina = () =>{
                 className="contenedor-pedido"
                 key={pedido.id}>
                 <h4> Orden # {indice + 1}</h4>
-                <h5>
-                  Mesero:{pedido.mesonero}  <br/>
-                  Cliente: {pedido.cliente} / Mesa:{pedido.mesa}
+                <h5 className='lineaUno'>  Cliente: {pedido.cliente} / Mesa:{pedido.mesa}  </h5>
+                 <h5 className='lineaDos'>  Mesero:{pedido.mesonero} </h5> <br/>
+
                   <button
                     value={pedido.id}
                     onClick={() => actualizarPedidoAListo(pedido.id)}>
                     Pedido Listo
                   </button>
-                  </h5>
+
                 <h5>Items del pedido:</h5>
                 <ListaPlatillos
                   selectedItems={pedido.selectedItems} />
