@@ -18,9 +18,9 @@ export const HomePage = () => {
 
           </div>
           
-          <Link to='/administrador'><button className='btnEntrada' >Administrador</button></Link>
+          <Link to='/register'><button className='btnEntrada' >Administrador</button></Link>
 
-          <Link to='/cocina'><button className='btnEntrada' >Cocina</button></Link>
+          <Link to='/register'><button className='btnEntrada' >Cocina</button></Link>
 
           <Link to='/register'><button className='btnEntrada'>Mesonero</button></Link>
 

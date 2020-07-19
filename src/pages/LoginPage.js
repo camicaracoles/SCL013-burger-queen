@@ -21,7 +21,7 @@ export const LoginPage = () => {
 
   const navigate = (job) => {
     const routesMap = { // this object is called map
-      mesonero: "./portalMesero",
+      mesonero: "./portalmesero",
       cocinero: "./cocina"
     };
     // routesMap["mesero"] is the same as routesMap.mesero

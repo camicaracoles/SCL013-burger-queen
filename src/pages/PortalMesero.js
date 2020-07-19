@@ -85,7 +85,7 @@ export class PortalMesero extends React.Component {
           </button>
         </div>
         <div className='fondoPortalMesero'>
-          <TomarPedido/>
+          
         </div>
       </div>
     )
