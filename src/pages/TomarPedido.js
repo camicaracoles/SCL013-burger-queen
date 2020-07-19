@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import menu from '../menu.json';
 import 'firebase/auth';
-import { db, auth } from '../firebase-Config';
-
-
+import { db, auth } from '../firebaseConfig';
 export default function TomarPedido() {
   const [menuType, setMenuType] = useState("Café");
   const [selectedItems, setSelectedItems] = useState([]);
@@ -11,14 +9,9 @@ export default function TomarPedido() {
   const [mesa, setMesa] = useState('');
   // let [producto, setProducto] = useState('');
   // let  [valor, setValor] = useState('');
-
-
-
-
   const resetState = () => {
     setSelectedItems([]);
   };
-
   const saveOrder = async (item = {}) => {
     try {
       const userId = auth.currentUser.uid;
@@ -26,7 +19,6 @@ export default function TomarPedido() {
       const user = await userRef.get();
       if (user.exists) {
         const mesoneroName = user.data().name;
-
         await db.collection('pedido').doc().set({
           ...item,
           mesonero: mesoneroName,
@@ -42,7 +34,6 @@ export default function TomarPedido() {
       console.error(`Ocurrió un error ${error.message}`)
     }
   };
-
   const handleSendOrder = () => {
     const order = {
       menuType,
@@ -53,7 +44,6 @@ export default function TomarPedido() {
     saveOrder(order)
     alert("enviando orden...")
   };
-
   const handleDeleteClick = (deleteID) => {
     const filterItem = selectedItems.filter(({ id }) => id !== deleteID)
     setSelectedItems(filterItem)
@@ -71,12 +61,10 @@ export default function TomarPedido() {
   };
   return (
     <div className="App">
-
       <div className="App-menu">
         <input className='inputRegistro' placeholder='Ingrese nombre de cliente' type='text' id='nombre' value={cliente} onChange={(ev) => setCliente(ev.target.value)}></input>
         <input className='inputRegistro' placeholder='Ingrese numero de mesa' type='text' id='mesa' value={mesa} onChange={(ev) => setMesa(ev.target.value)}></input>
         <br />
-
         <br />
         {Object.keys(menu).map(item => (
           <button className="btnEntr" onClick={() => setMenuType(item)}>
@@ -85,7 +73,6 @@ export default function TomarPedido() {
         ))}
         <br />
         <br />
-
         {menu[menuType].map(item => (
           <div className="App-menu__item" onClick={() => handleItemClick(item)}>
             {item.name} <span className='prueba'>${item.valor}</span>
@@ -99,14 +86,6 @@ export default function TomarPedido() {
             <div className="App-list__item">
               {item.name} <span> {item.valor}</span>
               <button onClick={() => handleDeleteClick(item.id)}>Eliminar</button>
-            </div>
-          ))}
-      </div>
-      <div className="App-list">
-        {selectedItems &&
-          selectedItems.map(item => (
-            <div className="App-list__item">
-              {name = item.name} <span> {valor = item.valor}</span>
             </div>
           ))}
         <div className="App-list__item App-list__total">

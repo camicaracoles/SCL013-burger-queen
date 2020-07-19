@@ -54,4 +54,3 @@ export class Cocina extends React.Component {
   }
 };
 
-// linea 9 concatenar el nombre del usuario Jefe de cocina
