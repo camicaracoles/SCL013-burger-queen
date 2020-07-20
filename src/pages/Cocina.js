@@ -82,6 +82,7 @@ export const Cocina = () => {
                       <ListaPlatillos selectedItems={pedido.selectedItems} />
                     </div>
                     <button id='listo' value={pedido.id} onClick={() => actualizarPedidoAListo(pedido.id)}>Listo</button>
+                    <div className='lineaSeparacion'></div>
                   </div>
                 );
               })

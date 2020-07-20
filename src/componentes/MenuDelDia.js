@@ -7,9 +7,6 @@ import { hamburguesas, liquidosFrios, bebidas } from './Data';
 
 class MenuDelDia extends React.Component {
 
-    guardarPedido = () => {
-
-    }
 
     render() {
         return (
@@ -97,6 +94,7 @@ class MenuDelDia extends React.Component {
 }
 
 export default MenuDelDia;
+
 
 //sacar los br, cambiarlos por  etiquetas <p> (porque me da un salto de linea).
 //mapear para ,mostrar botones automaticamente.
