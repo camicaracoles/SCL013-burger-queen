@@ -76,7 +76,7 @@ export class PortalMesero extends React.Component {
           <div id='diaPortalMesero'>
 
             <ComponentsDataHours />
-            
+            <TomarPedido/>
           </div>
         </div>
         <div className='volverPortalMesero'>
@@ -85,7 +85,7 @@ export class PortalMesero extends React.Component {
           </button>
         </div>
         <div className='fondoPortalMesero'>
-          
+
         </div>
       </div>
     )
