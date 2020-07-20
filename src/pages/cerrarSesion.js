@@ -1,5 +1,5 @@
 
-import { auth } from '../firebase-Config';
+import { auth } from '../firebaseConfig';
 
 
 export const logout = async () => {

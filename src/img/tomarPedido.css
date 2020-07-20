@@ -1,0 +1,93 @@
+
+.categoria {
+  justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: #FF1111;
+    margin: 4px
+}
+
+.hamburguesa {
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 67px;
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin: 1px 4px 1px 3px;
+    font-size: 15px;
+}
+.totalPagar {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 150px;
+  height: 30px;
+  background: #ffffff;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin: 40px 30px 40px 20px;
+  padding: 0px 0px 0px 10px;
+}
+.calcularCompra {
+  display: flex;
+  flex-direction: column;
+  width: 700px;
+  background: #F6D097;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+}
+.textoDetalleCompra {
+  height: 43px;
+  background: #888888;
+  font-size: 19px;
+}
+.enviarCocina {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 30px;
+  background: #38BC0A;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin: 40px 300px 40px 20px;
+}
+.totalPagar {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 150px;
+  height: 30px;
+  background: #ffffff;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-left: 70%;
+  margin-top: 3%;
+}
+.imgBorrar {
+  width: 30px;
+  height: 30px;
+
+}
+.borrar{
+  margin-top: -25px;
+  margin-bottom: 4px;
+  margin-left: 78%;
+}
+.valor{
+  margin-top: -3%;
+  margin-left: 53%;
+  width: 13%;
+}
+.montoAPagar{
+  margin-left: -8%;
+}
+.total{
+ margin-right: 30%;
+}

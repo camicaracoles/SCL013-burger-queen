@@ -1,8 +1,8 @@
 /* Diseño Menú Desyuno*/
 @media (min-width: 768px) {
-    
+
     /* Diseño en commún*/
-    
+
     .contenedorMenu {
         display: flex;
         justify-content: center;
@@ -46,7 +46,7 @@
     }
 
     /* Menú Desayuno*/
-    
+
     .liquidoCaliente {
         display: flex;
         flex-direction: column;
@@ -61,13 +61,13 @@
         margin: 10px 0px 10px 0px;
         font-size: 15px;
     }
-    
+
     .liquidoCaliente > p {
         padding: 0px;
         margin: 0px;
     }
 
-    
+
     .sandwich {
         display: flex;
         flex-direction: column;
@@ -80,7 +80,7 @@
         box-sizing: border-box;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         margin: 10px 0px 10px 0px;
-        font-size: 15px;  
+        font-size: 15px;
     }
 
     .sandwich > p {
@@ -103,8 +103,8 @@
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         margin: 10px 0px 10px 0px;
         font-size: 15px;
-    }   
-    
+    }
+
     .liquidosFrios > p {
         padding: 0px;
         margin: 0px;
@@ -122,7 +122,7 @@
         box-sizing: border-box;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         margin: 17px 0px 17px 0px;
-        font-size: 15px;  
+        font-size: 15px;
     }
 
     .hamburguesa > p {
