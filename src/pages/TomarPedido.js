@@ -3,7 +3,7 @@ import menu from '../menu.json';
 import 'firebase/auth';
 import { db, auth } from '../firebaseConfig';
 export default function TomarPedido() {
-  const [menuType, setMenuType] = useState("Café");
+  const [menuType, setMenuType] = useState("cafe");
   const [selectedItems, setSelectedItems] = useState([]);
   const [cliente, setCliente] = useState('');
   const [mesa, setMesa] = useState('');

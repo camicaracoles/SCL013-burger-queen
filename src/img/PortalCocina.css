@@ -9,7 +9,8 @@
 }
 
 .nombreTrabajadorCocina {
-    margin: 0px 800px 0px 50px
+    margin: 0px 800px 0px 50px;
+    font-size: 25px;
 }
 
 .lineaSubtitulo {
@@ -54,6 +55,7 @@
 
 .lineaUno > p {
     margin: 0px 60px 0px 60px;
+    font-size: 20px;
 }
 
 .lineaDos {
@@ -72,12 +74,12 @@
 
 .detalleMenú {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     flex-direction: column;
     border: 1px solid #000000;
     box-sizing: border-box;
     width: 600px;
-    height: 40px;
+    font-size: 25px;
 }
 
 #listo {

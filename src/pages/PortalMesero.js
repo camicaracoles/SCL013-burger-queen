@@ -8,7 +8,7 @@ import flecha from '../img/flecha.png';
 import PedidosListos from '../componentes/PedidosListos';
 import PedidosServidos from '../componentes/PedidosServidos';
 import PedidosPagados from '../componentes/PedidosPagados';
-import TomarPedido from './TomarPedido';
+import TomarPedido from '../pages/TomarPedido';
 
 
 
@@ -76,7 +76,7 @@ export class PortalMesero extends React.Component {
           <div id='diaPortalMesero'>
 
             <ComponentsDataHours />
-            
+
           </div>
         </div>
         <div className='volverPortalMesero'>
@@ -85,8 +85,7 @@ export class PortalMesero extends React.Component {
           </button>
         </div>
         <div className='fondoPortalMesero'>
-          
-        </div>
+          <TomarPedido />        </div>
       </div>
     )
   }

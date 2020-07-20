@@ -6,6 +6,7 @@ import {Link} from 'react-router-dom';
 import { db, auth } from '../firebaseConfig';
 import ComponentsDataHours from '../ComponentsDataHours';
 import { saveUserInLocalStorage } from "../helpers/session-service";
+import '../img/Login.css';
 
 export const LoginPage = () => {
   const history = useHistory();
